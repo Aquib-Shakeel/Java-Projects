@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+ ~ Hibernate Search, full-text search for your domain model
+ ~
+ ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later
+ ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+   -->
+   <!-- https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink -->
+<dependency>
+    <groupId>org.eclipse.persistence</groupId>
+    <artifactId>eclipselink</artifactId>
+    <version>2.5.0</version>
+</dependency>
+   
+<hibernate-configuration>
+<session-factory>
+<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="connection.url">jdbc:mysql://localhost:3306/pwskills</property>
+<property name="connection.username">root</property>
+<property name="connection.password">Friends@2</property>
+<!--  SQL dialect  -->
+<property name="hibernate.dialect">org.hibernate.dialect.MYSQL8Dialect</property>
+<!--  Enable Hibernate's automatic session context management  -->
+<property name="hibernate.show_sql">true</property>
+
+<property name="hibernate.format_sql">true</property>
+<!--  Drop and re-create the database schema on startup  -->
+<property name="hibernate.hbm2ddl.auto">update</property>
+
+</session-factory>
+</hibernate-configuration>
